@@ -644,6 +644,147 @@ is found to be 2.531 and 7.106 respectively and it shows $ H_\alpha $  absorptio
     \item \href{https://iraf-community.github.io/}{https://iraf-community.github.io/}
 \end{itemize}
 
+\chapter{Hubble redshift distance relation using Project CLEA}
+
+\section{Aim}
+To find the relationship between the redshift in spectra of distant galaxies and the rate of the expansion of the universe using CLEA Program "Hubble Redshift Distance Relation".
+
+\section{Theory}
+The software for the CLEA Hubble Redshift Distance Relation laboratory exercise puts in control of a large optical telescope equipped with a TV camera and an electronic spectrometer. Using this equipment, one can determine the distance and velocity of several galaxies located in selected clusters around the sky. The redshift of a galaxy can be determined by comparing the measured wavelength of a specific line or set of lines to the known wavelength of the line(s) when the emitter or absorber is at rest. Here we use the K and H lines of Ca II with rest wavelengths of $3933.7A^0$ and $3968.5A^0$ respectively. The recessional velocity v of the galaxy is then given by
+\begin{equation}
+    v=\frac{c*(\lambda_{obs}-\lambda_{rest})}{\lambda_{rest}}
+\end{equation}
+where $lambda_{rest}$ is the rest wavelength of the line given above, $\lambda_{obs}$ is the measured wavelength of the line from the galaxy’s spectrum, and $c=2.99792 × 10^5 km/s$.
+\newline
+To find the Hubble constant, we also need to determine the distance to the galaxies. To do this we assume that all of the galaxies in this sample have an absolute magnitude of $M=-22$. From the apparent magnitude(m) of the galaxy we can determine it's distance using the distance modulus equation,
+\begin{equation}
+    d=10^{0.2*(m-M+5)}
+\end{equation}
+From recessional velocities of the galaxies and their distances, one can find the Hubble constant from the Hubble’s law equation
+\begin{equation}
+    v= H_0*d
+\end{equation}
+Once we have the Hubble constant calibrated by fitting a line to the measured velocities and distances for a sample of galaxies, we can use the relation directly to find the distance to other galaxies.  Assuming the Hubble constant has been constant throughout the lifetime of the universe we can also determine the age of the universe using the equation
+\begin{equation}
+    t=d/v=1/H_0
+\end{equation}
+\newline
+
+\section{Tools used}
+\begin{itemize}
+    \item PROJECT CLEA
+    \newline
+    Project CLEA a contemporary laboratory experience in astronomy develops laboratory exercises that illustrate modern astronomical techniques using digital data and color images. Each CLEA laboratory exercise includes a dedicated computer program. The technical guides describe file formats, user-settable options, and algorithms used in the programs.
+\end{itemize}
+
+\section{Procedure}
+\begin{itemize}
+    \item  Open the Hubble Redshift program by double clicking on the CLEA hub icon in the Astro121 folder. Select Log In from the menu bar, and enter name and the lab table number. Click OK when ready. The title screen appears.
+    \item Select File…Run from the menu bar to begin the exercise. The screen shows the control panel and view
+    window as found in the “warm room” at the observatory. Open the dome by clicking on the Dome button. Locate the Monitor button on the control panel and note its status, i.e. finder scope.
+    \item Turn on the tracking by clicking the Tracking button. The telescope will now track in sync with the stars.
+    \item Select a field of view. To review the fields of study for tonight’s observing session, select Field… from the menu bar at the top of the control panel. The items you see listed are the fields that contain the objects we have selected to study tonight.
+    \item Select an object to study (one from each field of view).
+    \item Find a galaxy and slew the telescope using the N, S, E, W buttons so that the galaxy is inside the red finder window.
+    \item Click on the Monitor button to change the view from the Finder Scope to the Spectrometer. . Use the directional buttons (N, S, E or W), to slew the telescope to carefully
+    position, in the slit, the object you intend to use to collect data. After positioning the galaxy accurately in the slit, click on the Take Reading button. Press Start/Resume Count. When the Signal/Noise reaches 15 or more, click the Stop Count button. The computer will plot the spectrum with the available data. Find the H and K lines of calcium.
+    \item Record the object name, apparent magnitude, signal/noise, and the measured wavelength of the H and K lines of calcium. Then choose a second galaxy in the same galaxy field and repeat these steps. Go to Change Field on the menu and record data for two galaxies in each of the 5 galaxy fields.
+    \item Calculate the distance d and velocity v for the above saved data using the equations above.
+    \item Plot a Hubble diagram by graphing the velocity of a galaxy in km/sec (y-axis) vs. the distance in mega parsecs (x-axis). The slope of this straight line graph gives the Hubble constant and from that the age of the universe.
+\end{itemize}
+
+\section{Results}
+
+\subsection{Observations}
+\begin{center}
+    \begin{tabular}{c|c|c|c}
+        Object name & Apparent magnitude & K-line & H-line  \\ \hline 
+        36773&	15.8&	4125.5&	4162 \\
+        36747&	15.6&	4130.83	&4167.33 \\
+        36805&	15.4&	4133.33&	4169.83 \\
+        ngc 4874&	12.9&	4027.67&	4064.17 \\
+        ngc 4889&	12.5&	4020&	4056.5 \\
+        51976&	17.9&	4445.83&	4482.33 \\
+        51975&	18.5&	4455&	4491.5 \\
+        54876&	16&	4206&	4242.5 \\ 
+    \end{tabular}
+\end{center}
+
+\subsection{Calculations}
+\subsubsection{Distance calculation}
+\begin{center}
+    \begin{tabular}{c|c|c|c}
+        Object name & Apparent magnitude & Distance (pc) & Distance(Mpc)  \\ \hline 
+        36773 &	15.8 &	363078054.8 & 363.0780548 \\
+        36747 &	15.6 &	331131121.5 & 331.1311215 \\
+        36805 &	15.4 &	301995172 & 301.995172 \\
+        ngc 4874 &	12.9 &	95499258.6 & 95.4992586 \\
+        ngc 4889 &	12.5 &	79432823.47 & 79.43282347 \\
+        51976 &	17.9 &	954992586 & 954.992586 \\
+        51975 &	18.5 &	1258925412 & 1258.925412 \\
+        54876 &	16 & 398107170.6 & 398.1071706 \\
+    \end{tabular}
+\end{center}
+
+\subsubsection{Velocity calculation}
+\begin{center}
+    \begin{tabular}{c|c|c|c|c|c|c|c}
+        Obj & K-line& H-line &\Delta K-line&\Delta H-line& v_k (km s^{-1})& v_h (km s^{-1}) & v_{avg} (km s^{-1})\\ \hline
+        36773&	4125.5&	4162 & 191.83 & 193.5 & 14629.84948 & 14627.69308 & 14628.77128 \\
+        36747&	4130.83&	4167.33 & 197.16 & 198.83 & 15036.34011 & 15030.6161 & 15033.47811 \\
+        36805&	4133.33&	4169.83 & 199.66 & 201.33 & 15227.00176 & 15219.60438 & 15223.30307 \\
+        ngc 4874&	4027.67&	4064.17 & 94 & 95.67 & 7168.877918 & 7232.203603 & 7200.540761 \\
+        ngc 4889&	4020&	4056.5 & 86.33 & 88 & 6583.927986 & 6652.387552 & 6618.157769 \\
+        51976&	4445.83&	4482.33 & 512.16 & 513.83 & 39059.7076 & 38843.13973 & 38951.42366 \\
+        51975&	4455&	4491.5 & 521.33 & 523 & 39759.05452 & 39536.34875 & 39647.70163 \\
+        54876&	4206&	4242.5 & 272.33 & 274 & 20769.1545 & 20713.11579 & 20741.13515 \\
+    \end{tabular}
+\end{center}
+
+\newpage
+
+\subsubsection{Hubbles constant calculation}
+\begin{center}
+    \begin{tabular}{c|c|c|c}
+        Object name & Distance (Mpc) & Velocity (km s^{-1}) & H_0 (km s^{-1} Mpc^{-1}) \\ \hline
+        36773 & 363.0780548 & 14628.77128 & 40.29098176 \\
+        36747 & 331.1311215 & 15033.47811 & 45.40037807 \\
+        36805 & 301.995172 & 15223.30307 & 50.40909418 \\
+        ngc 4874 & 95.4992586 & 7200.540761 & 75.39891792 \\
+        ngc 4889 & 79.43282347 & 6618.157769 & 83.31766995 \\
+        51976 & 954.992586 & 38951.42366 & 40.78714771 \\
+        51975 & 1258.925412 & 39647.70163 & 31.49328885 \\
+        54876 & 398.1071706 & 20741.13515 & 52.09937595 \\
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.7]{v_avg vs. D(mpc).png}
+        \caption{Hubble's constant plot}
+        \label{fig:my_label}
+    \end{figure}
+\end{center}
+
+\begin{center}
+    Average $H_0$ is $52.3996068$ $km s^{-1} Mpc^{-1}$ \\
+    Velocity of galaxy at 800 Mpc is $41919.68544$ $km s^{-1}$ \\
+    Age of Universe is $5.8887417x10^{17}$ $s$ or $18$ $GYr$
+\end{center}
+
+\section{Conclusion}
+Using CLEA , velocity and distance of various galaxies were calculated , then plotted . The Hubble's Constant value is calculated as $52.3996068$ $km s^{-1} Mpc^{-1}$ and the Age of the Universe is calculated as $18$ $GYr$
+
+\section{References}
+\begin{itemize}
+    \item \href{http://public.gettysburg.edu/~marschal/clea/CLEAhome.html}{http://public.gettysburg.edu/~marschal/clea/CLEAhome.html}
+    \item \href{http://public.gettysburg.edu/~marschal/clea/clea-products/manuals/Hubbl-ug.pdf}{http://public.gettysburg.edu/~marschal/clea/clea-products/manuals/Hubbl-ug.pdf}
+    \item \href{http://www.ifa.hawaii.edu/~meech/education/clea.html}{http://www.ifa.hawaii.edu/~meech/education/clea.html}
+\end{itemize}
+
+
+
 \chapter{Read and plot an image from a FITS file}
 
 \section{Aim}
@@ -746,10 +887,10 @@ Display the image data:
     
     
 \subsubsection{Output}
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics{horsey.png}
-    \caption{Caption}
+    \includegraphics[scale = 0.5]{horsey.png}
+    \caption{}
     \label{fig:my_label}
 \end{figure}
 
